@@ -1,0 +1,1 @@
+@CircleCi = new Meteor.SmartCollection("circleCi")

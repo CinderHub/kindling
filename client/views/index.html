@@ -1,0 +1,16 @@
+<head>
+  <title>status</title>
+</head>
+
+<body>
+  HELLO OL' SPORT!
+  {{>circleCi}}
+</body>
+
+<template name="circleCi">
+  HELLO GREETING
+  {{allCircle}}
+  {{#with welcome}}
+    {{greeting}}
+  {{/with}}
+</template>
