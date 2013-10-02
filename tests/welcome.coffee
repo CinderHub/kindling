@@ -1,4 +1,4 @@
-suite "signupForm", ->
+suite "welcomeForm", ->
   test "Check Username", (done, server, client) ->
     console.log "Checking Username.."
     #ret = client.evalSync(->

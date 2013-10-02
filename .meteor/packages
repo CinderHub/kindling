@@ -9,3 +9,8 @@ coffeescript
 stylus
 smart-collections
 iron-router
+handlebar-helpers
+simple-schema
+collection2
+autoform
+sticks

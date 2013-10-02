@@ -1,0 +1,36 @@
+<template name="addGreetingForm">
+    {{#autoForm schema=addGreetingForm id="addGreetingForm" validation="keyup" novalidate="novalidate"}}
+    <fieldset>
+        <legend>Add a Greeting!</legend>
+        <div class="form-group{{#if afFieldIsInvalid "greeting"}} has-error{{/if}}">
+            {{afFieldLabel "greeting"}}
+            {{afFieldInput "greeting"}}
+            {{#if afFieldIsInvalid "greeting"}}
+            <span class="help-block">{{afFieldMessage "greeting"}}</span>
+            {{/if}}
+        </div>
+    </fieldset>
+    <button type="submit" data-meteor-method="addGreeting" class="btn btn-primary">Submit</button>
+    {{/autoForm}}
+
+    <table class="table table-bordered table-striped table-hover" style="margin: 25px 0;">
+        <thead>
+            <tr>
+                <th>Greeting</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each greetings}}
+            <tr>
+                <td>{{greeting}}</td>
+                <td>
+                    {{#autoForm schema=addGreetingForm doc=this novalidate="novalidate"}}
+                    <button type="submit" class="btn btn-primary remove">Delete</button>
+                    {{/autoForm}}
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</template>

@@ -1,1 +1,1 @@
-@CircleCi = new Meteor.SmartCollection("circleCi")
+#@Greetings = new Meteor.SmartCollection("greetings")
